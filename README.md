@@ -63,11 +63,23 @@ developing your own process.
 - Add a new toy when the toy form is submitted
 
   - How I debugged:
+   1) First see what error I am getting when I submit by viewing:
+    Console Log
+    Network
+    Rails Server Logs
+    Saw error saying uninitialized constant for "toys" in ToysController.  Saw that there was a typo for Toys.create and corrected to Toy.create
 
 - Update the number of likes for a toy
 
   - How I debugged:
+  Reviewed Console, Network, and Server logs
+  Saw I was getting a JS syntax error on JSOn response which meant JS was failing to get response back
+  Saw that update method was not return json
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  Hit the delete button, reviewed console, network, and server log
+  saw in server log i was getting a routing error
+  saw in routes that :destroy was not called in resources
+
